@@ -79,14 +79,32 @@
       </h1>
       <div class="d-flex justify-content-center">
         <form class="w-50">
-          <input type="text" id="userid" class="form-control" autocomplete="off" readonly placeholder="ID" />
-          <input type="text" id="proname" class="form-control" autocomplete="off" placeholder="Product Name" />
+          <input type="text" id="userid" class="form-control" autocomplete="off" readonly placeholder="Order ID" />
+          <select id="operation_system" class="form-control m-0" autocomplete="off" placeholder="OS" >
+            <option>OS</option>
+            <option >Windows 8</option>
+            <option >Windows 10</option>
+            <option >Ubuntu</option>
+            <option >MS DOS</option>
+          </select>
+          <br />
           <div class="row">
             <div class="col">
-              <input type="text" id="seller" class="form-control m-0" autocomplete="off" placeholder="Seller" />
+              <select id="peripheral_devices" class="form-control m-0" autocomplete="off" placeholder="Peripheral Devices" >
+                <option >Peripheral Devices</option>
+                <option >No Peripheral Devices</option>
+                <option >Mouse & Keyboard</option>
+                <option >Mouse, Keyboard & Monitor</option>
+                <option >Monitor Only</option>
+              </select>
             </div>
             <div class="col">
-              <input type="text" id="price" class="form-control m-0" autocomplete="off" placeholder="Price" />
+              <select id="case_size" class="form-control m-0" autocomplete="off" >
+                <option >Case Size</option>
+                <option >Small</option>
+                <option >Casual</option>
+                <option >Heavy</option>
+              </select>
             </div>
           </div>
         </form>
@@ -100,7 +118,7 @@
         <table class="table table-striped">
           <thead>
             <tr>
-              <th scope="col">ID</th>
+              <th scope="col">Order ID</th>
               <th scope="col">Operating System</th>
               <th scope="col">Peripheral Devices</th>
               <th scope="col">Case Size</th>
