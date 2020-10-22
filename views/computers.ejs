@@ -78,40 +78,41 @@
         <i class="fas fa-plug"></i> Rakit Computer
       </h1>
       <div class="d-flex justify-content-center">
-        <form class="w-50">
+        <form class="w-50" method="POST" action="/computers/">
           <input type="text" id="userid" class="form-control" autocomplete="off" readonly placeholder="Order ID" />
-          <select id="operation_system" class="form-control m-0" autocomplete="off" placeholder="OS" >
-            <option>OS</option>
-            <option >Windows 8</option>
-            <option >Windows 10</option>
-            <option >Ubuntu</option>
-            <option >MS DOS</option>
+          <select name="operating_system" id="operating_system" class="form-control m-0" autocomplete="off" placeholder="OS" >
+            <option value="">OS</option>
+            <option value="Windows 8">Windows 8</option>
+            <option value="Windows 10">Windows 10</option>
+            <option value="Ubuntu">Ubuntu</option>
+            <option value="MS DOS">MS DOS</option>
           </select>
           <br />
           <div class="row">
             <div class="col">
-              <select id="peripheral_devices" class="form-control m-0" autocomplete="off" placeholder="Peripheral Devices" >
-                <option >Peripheral Devices</option>
-                <option >No Peripheral Devices</option>
-                <option >Mouse & Keyboard</option>
-                <option >Mouse, Keyboard & Monitor</option>
-                <option >Monitor Only</option>
+              <select name="peripheral_devices" id="peripheral_devices" class="form-control m-0" autocomplete="off" placeholder="Peripheral Devices" >
+                <option value="">Peripheral Devices</option>
+                <option value="No Peripheral">No Peripheral Devices</option>
+                <option value="Mouse & Keyboard">Mouse & Keyboard</option>
+                <option value="Mouse, Keyboard & Monitor">Mouse, Keyboard & Monitor</option>
+                <option value="Monitor Only">Monitor Only</option>
               </select>
             </div>
             <div class="col">
-              <select id="case_size" class="form-control m-0" autocomplete="off" >
-                <option >Case Size</option>
-                <option >Small</option>
-                <option >Casual</option>
-                <option >Heassvyw</option>
+              <select name="case_size" id="case_size" class="form-control m-0" autocomplete="off" >
+                <option value="">Case Size</option>
+                <option value="Small">Small</option>
+                <option value="Casual">Casual</option>
+                <option value="Heavy">Heavy</option>
               </select>
             </div>
           </div>
+          <div class="d-flex justify-content-center">
+            <button class="btn btn-success" id="btn-create">Add Order</button>
+          </div>
         </form>
       </div>
-      <div class="d-flex justify-content-center">
-        <button class="btn btn-success" id="btn-create">Add Order</button>
-      </div>
+      
 
       <!--  Table -->
       <div class="d-flex table-data">
