@@ -79,7 +79,7 @@
       </h1>
       <div class="d-flex justify-content-center">
         <form class="w-50" method="POST" action="/computers/">
-          <input type="text" id="userid" class="form-control" autocomplete="off" readonly placeholder="Order ID" />
+          <input type="text" id="userid" class="form-control" autocomplete="off" readonly placeholder="<%= "Order " + (data.length + 1) %>" />
           <select name="operating_system" id="operating_system" class="form-control m-0" autocomplete="off" placeholder="OS" >
             <option value="">OS</option>
             <option value="Windows 8">Windows 8</option>
@@ -129,20 +129,15 @@
             </tr>
           </thead>
           <tbody id="tbody">
-            <!--
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        -->
+            <% data.forEach((el) => { %>
+              <tr>
+                <td><%= el.id %></td>
+                <td><%= el.operating_system %></td>
+                <td><%= el.peripheral_devices %></td>
+                <td><%= el.case_size %></td>
+                <td><%= null %></td>
+              </tr>
+            <%})%>
           </tbody>
         </table>
       </div>
