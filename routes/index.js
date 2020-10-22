@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const mainRoutes = require('./main.js');
+const mainRoutes = require('./computers.js');
 const customerRoutes = require('./customers.js');
 
 router.get('/', (req, res) => {
-    res.redirect('/computer-panel')
+    res.redirect('/computers')
 })
-router.use('/computer-panel', mainRoutes)
+router.use('/computers', mainRoutes)
 router.use('/customers', customerRoutes)
 
 
